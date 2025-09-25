@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Ah Khoeurn 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  html,body { height:100%; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #3a0ca3 0%, #7209b7 45%, #f72585 100%);
+    color: #fff;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: auto;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    opacity: 0.28;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 0;
+    animation: moveStars 60s linear infinite;
+    will-change: transform;
+  }
+  @keyframes moveStars {
+    from { transform: translate3d(0,0,0); }
+    to   { transform: translate3d(-100px,-100px,0); }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 720px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: clamp(22px, 4vw, 48px);
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    margin: 16px;
+    will-change: transform;
+  }
+
+  .portrait {
+    width: clamp(140px, 26vw, 220px);
+    height: clamp(140px, 26vw, 220px);
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 5px solid rgba(255,255,255,0.95);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    margin: 6px 0 12px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  }
+
+  p.lead {
+    max-width: 58ch;
+    margin: 0 auto 22px;
+    font-size: clamp(1rem, 2.4vw, 1.18rem);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.95);
+  }
+
+  .btn {
+    background: linear-gradient(135deg,#ff6f91,#f72585);
+    color:#fff;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-weight:600;
+    font-size: 1rem;
+    cursor:pointer;
+    border:none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+
+  /* Hearts */
+  .hearts {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .heart {
+    position: absolute;
+    width: 18px; height: 18px;
+    transform: rotate(-45deg);
+    will-change: transform, opacity;
+  }
+  .heart::before,.heart::after {
+    content:"";
+    position:absolute;
+    width:18px;height:18px;border-radius:50%;
+    background:var(--heart-color,#ff4766);
+  }
+  .heart::before{ top:-9px; left:0; }
+  .heart::after{ top:0; left:9px; }
+  @keyframes heartMove {
+    0% { transform: translate3d(0,0,0) rotate(-45deg); opacity:1; }
+    100% { transform: translate3d(0,-110vh,0) rotate(-45deg); opacity:0; }
+  }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none; justify-content:center; align-items:center;
+    z-index: 6;
+    padding: 20px;
+  }
+  .modal {
+    width: min(420px, 95%);
+    background:#fff; color:#222;
+    border-radius: 14px;
+    padding:20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    text-align:center;
+    transform: scale(0.95);
+    opacity:0;
+    transition: all .25s ease-out;
+  }
+  .modal.show {
+    transform: scale(1);
+    opacity:1;
+  }
+  .modal-img {
+    width:80px;height:80px;border-radius:50%;
+    object-fit:cover;margin:0 auto 12px;
+  }
+  .modal h2 { font-family:'Great Vibes', cursive; font-size:1.8rem; margin-bottom:8px; }
+  .modal p { font-size:0.98rem; color:#333; }
+  .modal .sign { margin-top:12px; font-weight:600; }
+
+  .close-btn {
+    margin-top:14px;
+    background: linear-gradient(135deg,#ff6f91,#f72585);
+    color:#fff; border:none; padding:10px 18px;
+    border-radius:999px; cursor:pointer;
+  }
+
+  @media (max-width:420px){
+    .container{ padding:20px; border-radius:20px; }
+    .portrait{ width:36vw; height:36vw; max-width:160px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <img class="portrait" src="ah-khoeurn.jpg" alt="Ah Khoeurn">
+    <h1>Happy Birthday Ah Khoeurn 💖</h1>
+    <p class="lead">
+      Ah Khoeurn, today is all about you — the incredible, beautiful soul who fills every chat and every moment with warmth and joy. Even though we haven’t met in person, every conversation we’ve had (from Boo to Instagram) brightens my day and lifts my heart. Wishing you endless smiles, laughter that warms your soul, and happiness that follows you wherever you go. 🌸✨
+    </p>
+    <button class="btn" id="openPopupBtn">💌 A Special Wish</button>
+  </div>
+
+  <div class="hearts" id="heartsLayer"></div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalBox">
+      <img class="modal-img" src="ah-khoeurn.jpg" alt="Ah Khoeurn">
+      <h2>A Special Birthday Wish</h2>
+      <p>
+        Ah Khoeurn… I love you. 💖 Even though we’re far apart and haven’t met face-to-face yet, every message we share brings me closer to you. I dream of the day we can be together — laughing, talking, and sharing life in person. Until then, know that my heart is always with you on your birthday and every day.
+      </p>
+      <div class="sign">With all my love,<br><strong>Aditya Makhija 💌</strong></div>
+      <button class="close-btn" id="closePopupBtn">Close</button>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const layer = document.getElementById('heartsLayer');
+  function makeHeart(){
+    const el=document.createElement('div');
+    el.className='heart';
+    const hue=340+Math.round(Math.random()*30);
+    el.style.setProperty('--heart-color',`hsl(${hue} 90% 65%)`);
+    el.style.left=Math.random()*100+'%';
+    const size=14+Math.random()*14;
+    el.style.width=size+'px';el.style.height=size+'px';
+    el.style.top='100%';
+    const dur=5+Math.random()*5;
+    el.style.animation=`heartMove ${dur}s linear forwards`;
+    layer.appendChild(el);
+    setTimeout(()=>el.remove(),dur*1000);
+  }
+  setInterval(makeHeart,800);
+
+  const openBtn=document.getElementById('openPopupBtn');
+  const overlay=document.getElementById('modalOverlay');
+  const modal=document.getElementById('modalBox');
+  const closeBtn=document.getElementById('closePopupBtn');
+
+  openBtn.onclick=()=>{ overlay.style.display='flex'; setTimeout(()=>modal.classList.add('show'),20); };
+  closeBtn.onclick=()=>{ modal.classList.remove('show'); setTimeout(()=>overlay.style.display='none',200); };
+  overlay.onclick=(e)=>{ if(e.target===overlay) closeBtn.click(); };
+})();
+</script>
+
+</body>
+</html>
